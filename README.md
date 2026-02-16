@@ -92,6 +92,20 @@ Ejemplo: `schedule_BUS-003_20260215_103000_123.json`
 | `RABBITMQ_USERNAME` | Usuario RabbitMQ | *(requerido)* |
 | `RABBITMQ_PASSWORD` | Contraseña RabbitMQ | *(requerido)* |
 
+## Configuración de Variables de Entorno
+
+El proyecto incluye un archivo `.env.example` con las variables necesarias:
+
+```bash
+# Copiar el archivo de ejemplo
+cp .env.example .env
+
+# Editar con tus valores
+nano .env
+```
+
+> **Nota:** En `docker-compose.yml` estas variables ya tienen valores por defecto. El `.env` solo es necesario si se desea ejecutar el contenedor de forma independiente con `docker run --env-file .env`, o para ejecución local con `export $(cat .env | xargs)`.
+
 ## Almacenamiento de Archivos
 
 Los archivos JSON se guardan en `/app/update_rutas/` dentro del contenedor.
