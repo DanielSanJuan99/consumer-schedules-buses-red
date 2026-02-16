@@ -76,4 +76,12 @@ public class ScheduleConsumerService {
         File directory = new File(storagePath);
         return directory.listFiles();
     }
+
+    public File getFileByName(String fileName) {
+        File file = new File(storagePath, fileName);
+        if (file.exists() && file.isFile()) {
+            return file;
+        }
+        return null;
+    }
 }
