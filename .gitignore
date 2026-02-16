@@ -69,3 +69,7 @@ logs/
 
 # Spring Boot
 spring-boot-*.log
+
+# Environment variables (solo subir .env.example)
+.env
+!.env.example
